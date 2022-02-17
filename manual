@@ -1,5 +1,5 @@
 ## configuramos zshrc
-cp /config/zsh/.zshrc /home/devparrot/
+cp config/zsh/.zshrc /home/devparrot/
 
 ## Creamos enlace simbolico estando en root
 ln -s -f /home/devparrot/.zshrc ~/.zshrc
@@ -23,3 +23,11 @@ chown devparrot:devparrot /root/.local -R
 
 # Instalamos de forma manual el lsd descargando el binario desde su repositorrio
 apt -y install name_file
+
+# Descargamos e instalamos firefox, lo descomprimos en la ruta /opt
+
+# Anadimos el usuario devparrot a la lista de firejail '/etc/firejail/firejail.users'
+
+# Descargamos e instalamos lsd "dpkg -i file.deb"
+
+# Configuramos tema nord "rofi-theme-selector"
