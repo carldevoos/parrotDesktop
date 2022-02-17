@@ -1,0 +1,25 @@
+## configuramos zshrc
+cp /config/zsh/.zshrc /home/devparrot/
+
+## Creamos enlace simbolico estando en root
+ln -s -f /home/devparrot/.zshrc ~/.zshrc
+
+## Cambiamos shell por defecto
+usermod --shell /usr/bin/zsh devparrot
+usermod --shell /usr/bin/zsh root
+
+## Configuramos .p10k.zsh
+# POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE -- asignar el #
+# POWERLEVEL9K_CONTEXT_PREFIX='%246Fwith ' -- elimina prefijo
+
+#cd ~
+#cp $dir_folder/config/zsh/.p10k.zsh /home/devparrot/
+#ln -s -f /home/devparrot/.p10k.zsh ~/.p10k.zsh
+
+## Permisos de ejecucion
+chown devparrot:devparrot /root
+chown devparrot:devparrot /root/.cache -R
+chown devparrot:devparrot /root/.local -R
+
+# Instalamos de forma manual el lsd descargando el binario desde su repositorrio
+apt -y install name_file
